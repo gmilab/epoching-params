@@ -1,0 +1,31 @@
+{
+  "t0marker": ["HappyL", "HappyR", "AngryL", "AngryR", "NeutralL", "NeutralR"],
+  "t0shift": 0,
+  "tEpoch": [-2.5, 3.5],
+  "defaults": {
+    "tSearch": [0.05, 1.0],
+    "getTrigStats": ["PresentationButtonR", "PresentationButtonL"]
+  },
+  "details": [{
+    "name": "Happy",
+    "require": [{
+      "trigName": ["HappyL", "HappyR"],
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }]
+  }, {
+    "name": "Angry",
+    "require": [{
+      "trigName": ["AngryL", "AngryR"],
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }]
+  }, {
+    "name": "Neutral",
+    "require": [{
+      "trigName": ["NeutralL", "NeutralR"],
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }]
+  }]
+}

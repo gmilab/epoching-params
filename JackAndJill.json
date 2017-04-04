@@ -1,0 +1,117 @@
+{
+  "t0marker": "Drop",
+  "t0shift": 0,
+  "tEpoch": [-2.5, 3.5],
+  "defaults": {
+    "tSearch": [0.05, 3.0]
+  },
+  "details": [{
+    "name": "USUW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [-0.01,0.01],
+      "type": "exclude"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [-0.01,0.01],
+      "type": "exclude"
+    }, {
+      "trigName": ["ButtonCorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["ButtonIncorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "incorrect"
+    }]
+  }, {
+    "name": "USIW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [-0.01,0.01],
+      "type": "exclude"
+    }, {
+      "trigName": ["ButtonCorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["ButtonIncorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "incorrect"
+    }]
+  }, {
+    "name": "ISUW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [-0.01,0.01],
+      "type": "exclude"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["ButtonCorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["ButtonIncorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "incorrect"
+    }]
+  }, {
+    "name": "ISIW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["ButtonCorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["ButtonIncorrect"],
+      "tSearch": [0.05, {
+        "trigName": ["Cross"],
+        "within": [0.1,1.5],
+        "offset": 0.05
+      }],
+      "type": "incorrect"
+    }]
+  }]
+}

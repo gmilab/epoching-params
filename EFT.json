@@ -1,0 +1,88 @@
+{
+  "t0marker": ["HappyL", "HappyR", "AngryL", "AngryR", "NeutralL", "NeutralR"],
+  "t0shift": 0,
+  "tEpoch": [-2.5, 3.5],
+  "defaults": {
+    "tSearch": [0.05, 1.0],
+    "getTrigStats": ["PresentationButtonR", "PresentationButtonL"]
+  },
+  "details": [{
+    "name": "HappyL",
+    "require": [{
+      "trigName": "HappyL",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "exclude"
+    }]
+  }, {
+    "name": "HappyR",
+    "require": [{
+      "trigName": "HappyR",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "exclude"
+    }]
+  }, {
+    "name": "AngryL",
+    "require": [{
+      "trigName": "AngryL",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "exclude"
+    }]
+  }, {
+    "name": "AngryR",
+    "require": [{
+      "trigName": "AngryR",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "exclude"
+    }]
+  }, {
+    "name": "NeutralL",
+    "require": [{
+      "trigName": "NeutralL",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "exclude"
+    }]
+  }, {
+    "name": "NeutralR",
+    "require": [{
+      "trigName": "NeutralR",
+      "tSearch": [-0.1, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonL",
+      "type": "includeOnce"
+    }, {
+      "trigName": "PresentationButtonR",
+      "type": "exclude"
+    }]
+  }]
+}

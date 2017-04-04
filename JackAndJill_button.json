@@ -1,0 +1,93 @@
+{
+  "t0marker": ["ButtonCorrect"],
+  "t0shift": 0,
+  "tEpoch": [-4.5,1.0],
+  "defaults": {
+    "tSearch": [0.05, 1.0]
+  },
+  "details": [{
+    "name": "USUW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "exclude"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+	  "type": "exclude"
+	}]
+  }, {
+    "name": "USIW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+	  "type": "exclude"
+    }]
+  }, {
+    "name": "ISUW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "exclude"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "includeOnce"
+    }]
+  }, {
+    "name": "ISIW",
+    "require": [{
+      "trigName": ["Witnessed"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["Switched"],
+      "tSearch": [{
+		"trigName": "Drop",
+		"within": [-3.1, 0],
+		"offset": -0.05,
+		"order": -1
+	  }, 0],
+      "type": "includeOnce"
+    }]
+  }]
+}

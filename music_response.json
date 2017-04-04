@@ -1,0 +1,214 @@
+{
+  "t0marker": ["UF", "FL", "FD"],
+  "t0shift": 0,
+  "tEpoch": [-2, 32],
+  "defaults": {
+    "tSearch": [-0.05, 0.05],
+    "getTrigStats": []
+  },
+  "details": [{
+    "name": "FL",
+    "require": [{
+      "trigName": ["ButtonLeft"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }]
+  }, {
+    "name": "FD",
+    "require": [{
+      "trigName": ["ButtonLeft"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }]
+  }, {
+    "name": "UL",
+    "require": [{
+      "trigName": ["ButtonRight"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }]
+  }, {
+    "name": "UD",
+    "require": [{
+      "trigName": ["ButtonRight"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionF",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonRight"],
+      "type": "include",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }, {
+      "trigName": ["ButtonLeft"],
+      "type": "exclude",
+      "tSearch": [{
+        "trigName": "QuestionL",
+        "within": [25,45],
+        "offset": 0
+      }, {
+        "trigName": ["UF", "FL", "FD", "NewLightFiltered"],
+        "within": [25,45],
+        "offset": 0
+      }]
+    }]
+  }]
+}
