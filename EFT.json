@@ -3,86 +3,97 @@
   "t0shift": 0,
   "tEpoch": [-2.5, 3.5],
   "defaults": {
-    "tSearch": [0.05, 1.0],
-    "getTrigStats": ["PresentationButtonR", "PresentationButtonL"]
+    "tSearch": [0.05, 0.6]
   },
   "details": [{
     "name": "HappyL",
     "require": [{
       "trigName": "HappyL",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonR",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonL",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }, {
     "name": "HappyR",
     "require": [{
       "trigName": "HappyR",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonL",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonR",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }, {
     "name": "AngryL",
     "require": [{
       "trigName": "AngryL",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonR",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonL",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }, {
     "name": "AngryR",
     "require": [{
       "trigName": "AngryR",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonL",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonR",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }, {
     "name": "NeutralL",
     "require": [{
       "trigName": "NeutralL",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonR",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonL",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }, {
     "name": "NeutralR",
     "require": [{
       "trigName": "NeutralR",
-      "tSearch": [-0.1, 0],
+      "tSearch": [-0.1, 0.1],
       "type": "includeOnce"
     }, {
       "trigName": "PresentationButtonL",
-      "type": "includeOnce"
+      "type": "correct",
+      "tSearch": [0.1,1.0]
     }, {
       "trigName": "PresentationButtonR",
-      "type": "exclude"
+      "type": "incorrect",
+      "tSearch": [0.1,1.0]
     }]
   }]
 }
