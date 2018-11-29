@@ -1,0 +1,109 @@
+{
+  "t0marker": "Stim",
+  "t0shift": 0.02,
+  "tEpoch": [-1.0,3.0],
+  "defaults": {
+    "tSearch": [0,2.5]
+  },
+  "details": [{
+    "name": "Correct2",
+    "require": [{
+      "trigName": ["Load2"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["CorrectSame", "CorrectDiff"],
+      "type": "correct",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }, {
+      "trigName": ["IncorrectSame", "IncorrectDiff"],
+      "type": "incorrect",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }]
+  }, {
+    "name": "Correct4",
+    "require": [{
+      "trigName": ["Load4"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["CorrectSame", "CorrectDiff"],
+      "type": "correct",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }, {
+      "trigName": ["IncorrectSame", "IncorrectDiff"],
+      "type": "incorrect",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }]
+  }, {
+    "name": "Incorrect2",
+    "require": [{
+      "trigName": ["Load2"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["IncorrectSame", "IncorrectDiff"],
+      "type": "correct",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }]
+  }, {
+    "name": "Incorrect4",
+    "require": [{
+      "trigName": ["Load4"],
+      "tSearch": [-0.01,0.01],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["IncorrectSame", "IncorrectDiff"],
+      "type": "correct",
+      "tSearch": [{
+        "trigName": "Test",
+        "within": [1,1.5],
+        "offset": 0.2
+      }, {
+        "trigName": "Fixation",
+        "within": [1.2,3.5],
+        "offset": 0.05
+      }]
+    }]
+  }]
+}

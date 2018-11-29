@@ -1,0 +1,51 @@
+{
+  "t0marker": ["Face", "Catch"],
+  "t0shift": 0,
+  "tEpoch": [-1.5, 1.5],
+  "defaults": {
+    "tSearch": [0.05, 1.0]
+  },
+  "details": [{
+    "name": "Face",
+    "require": [{
+      "trigName": ["Face"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }]
+  }, {
+    "name": "CatchCorrect",
+    "require": [{
+      "trigName": ["Catch"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.1, {
+        "trigName": "Fixation",
+        "within": [0.1, 2.5]
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["Incorrect"],
+      "tSearch": [0.1, {
+        "trigName": "Fixation",
+        "within": [0.1, 2.5]
+      }],
+      "type": "exclude"
+    }]
+  }, {
+    "name": "CatchIncorrect",
+    "require": [{
+      "trigName": ["Catch"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Incorrect"],
+      "tSearch": [0.1, {
+        "trigName": "Fixation",
+        "within": [0.1, 2.5]
+      }],
+      "type": "include"
+    }]
+  }]
+}
