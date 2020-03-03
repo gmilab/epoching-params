@@ -1,31 +1,43 @@
 {
-  "t0marker": ["HappyL", "HappyR", "AngryL", "AngryR", "NeutralL", "NeutralR"],
-  "t0shift": 0,
-  "tEpoch": [-2.5, 3.5],
+  "t0marker": ["Happy", "Angry", "RightTarget"],
+  "t0shift": 0.02,
+  "tEpoch": [-1.5, 3.55],
+  "tInterest": [-0.5, 1.5],
   "defaults": {
-    "tSearch": [0.05, 1.0],
-    "getTrigStats": ["PresentationButtonR", "PresentationButtonL"]
+    "tSearch": [0.05, 1.0]
   },
   "details": [{
     "name": "Happy",
     "require": [{
-      "trigName": ["HappyL", "HappyR"],
-      "tSearch": [-0.1, 0],
-      "type": "includeOnce"
+      "trigName": "Happy",
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Incorrect"],
+      "tSearch": [0, 3.5],
+      "type": "incorrect"
     }]
   }, {
     "name": "Angry",
     "require": [{
-      "trigName": ["AngryL", "AngryR"],
-      "tSearch": [-0.1, 0],
-      "type": "includeOnce"
+      "trigName": "Angry",
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Incorrect"],
+      "tSearch": [0, 3.5],
+      "type": "incorrect"
     }]
   }, {
-    "name": "Neutral",
+    "name": "Catch",
     "require": [{
-      "trigName": ["NeutralL", "NeutralR"],
-      "tSearch": [-0.1, 0],
-      "type": "includeOnce"
+      "trigName": "RightTarget",
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0, 4.1],
+      "type": "correct"
     }]
   }]
 }
