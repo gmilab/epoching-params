@@ -1,0 +1,37 @@
+{
+  "t0marker": ["NewLightFiltered"],
+  "t0shift": 0.023,
+  "tEpoch": [-1.0, 1.5],
+  "defaults": {
+    "tSearch": [0.05, 1.0]
+  },
+  "details": [{
+    "name": "New",
+    "require": [{
+      "trigName": ["New"],
+      "tSearch": [-0.1,0.1],
+      "type": "includeOnce"
+    }]
+  }, {
+    "name": "Repeat",
+    "require": [{
+      "trigName": ["Repeat"],
+      "tSearch": [-0.1, 0.1],
+      "type": "includeOnce"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.2, {
+        "trigName": ["New", "Repeat"],
+        "within": [0.5, 2.0]
+      }],
+      "type": "correct"
+    }, {
+      "trigName": ["Incorrect"],
+      "tSearch": [0.2, {
+        "trigName": ["New", "Repeat"],
+        "within": [0.5, 2.0]
+      }],
+      "type": "incorrect"
+    }]
+  }]
+}
