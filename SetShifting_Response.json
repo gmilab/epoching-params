@@ -1,0 +1,25 @@
+{
+  "t0marker": ["Correct"],
+  "t0shift": 0,
+  "tEpoch": [-2,1],
+  "tInterest": [-2,1],
+  "defaults": {
+    "tSearch": [-0.01, 0.01],
+    "getTrigStats": []
+  },
+  "details": [{
+    "name": "Shift",
+    "require": [{
+      "trigName": ["ExtraDim", "IntraDim"],
+      "tSearch": [-4 -0.1],
+      "type": "include"
+    }]
+  }, {
+    "name": "NoShift",
+    "require": [{
+      "trigName": ["ExtraDim", "IntraDim"],
+      "tSearch": [-4 -0.1],
+      "type": "exclude"
+    }]
+  }]
+}

@@ -1,16 +1,39 @@
 {
   "t0marker": ["ShapeRule","ColorRule"],
   "t0shift": 0.023,
-  "tEpoch": [-1.0, 4],
-  "tInterest": [-0.75, 0.75],
+  "tEpoch": [-1.0, 2.25],
+  "tInterest": [-0.5, 1.5],
   "defaults": {
     "tSearch": [-0.01, 0.01],
     "getTrigStats": []
   },
   "details": [{
-    "name": "Shift",
+    "name": "ExtraDim",
     "require": [{
-      "trigName": ["ExtraDim", "IntraDim"],
+      "trigName": ["ExtraDim"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.1, {
+        "trigName": ["ShapeRule", "ColorRule"], 
+        "within": [0.15, 5.0], 
+        "offset": 0
+      }],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.1, {
+        "trigName": ["ShapeRule", "ColorRule"], 
+        "within": [0.15, 5.0], 
+        "offset": 0
+      }],
+      "type": "correct"
+    }]
+  }, {
+    "name": "IntraDim",
+    "require": [{
+      "trigName": ["IntraDim"],
       "tSearch": [-0.1, 0.1],
       "type": "include"
     }, {
