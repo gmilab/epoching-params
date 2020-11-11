@@ -1,20 +1,62 @@
 {
+<<<<<<< HEAD
+    "t0marker": ["Go", "Nogo"],
+=======
     "t0marker": ["Go"],
+>>>>>>> 852b33bd7efdec06b95e0b4ac934665cc601eec3
     "t0shift": 0.023,
     "tEpoch": [-1,1.5],
     "tInterest": [-1,1.5],
     "defaults": {"tSearch": [0.05, 1], "getTrigStats": []},
     "name": "GoNoGo",
     "shortname": "gonogo",
+<<<<<<< HEAD
+    "details": [{
+            "name": "Go",
+            "shortname": "go",
+            "require": [{
+                "trigName": ["Go"], 
+                "tSearch": [-0.1, 0.1], 
+                "type": "include"
+              }, {
+=======
     "details": [
         {
             "name": "Go",
             "shortname": "go",
             "require": [
                 {
+>>>>>>> 852b33bd7efdec06b95e0b4ac934665cc601eec3
                   "trigName": ["Correct", "Incorrect"], 
                   "tSearch": [0.15, {"trigName": ["Nogo", "Go"], "within": [0.15, 5], "offset": -0.05}], 
                   "type": "correct"
                 }]
+<<<<<<< HEAD
+      },{
+            "name": "NogoCorr",
+            "shortname": "Nogocorr",
+            "require": [{
+              "trigName": ["Nogo"], 
+              "tSearch": [-0.1, 0.1], 
+              "type": "include"
+              }, {
+                "trigName": ["Incorrect"], 
+                "tSearch": [0.15, {"trigName": ["Nogo", "Go"], "within": [0.15, 5], "offset": -0.05}], 
+                "type": "exclude"
+              }]
+      },{
+            "name": "NogoComm",
+            "shortname": "Nogocomm",
+            "require": [{
+              "trigName": ["Nogo"], 
+              "tSearch": [-0.1, 0.1], 
+              "type": "include"
+              }, {
+                "trigName": ["Incorrect"], 
+                "tSearch": [0.15, {"trigName": ["Nogo", "Go"], "within": [0.15, 5], "offset": -0.05}], 
+                "type": "include"
+              }]
+=======
+>>>>>>> 852b33bd7efdec06b95e0b4ac934665cc601eec3
     }]
 }

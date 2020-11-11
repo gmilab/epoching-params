@@ -1,0 +1,34 @@
+{
+    "t0marker": ["Target", "Distractor"],
+    "t0shift": 0.023,
+    "tEpoch": [-1,1.5],
+    "tInterest": [-1,1.5],
+    "defaults": {"tSearch": [0.05, 1], "getTrigStats": []},
+    "name": "Oddball",
+    "shortname": "oddball",
+    "details": [{
+            "name": "Target",
+            "shortname": "target",
+            "require": [{
+                "trigName": ["Target"], 
+                "tSearch": [-0.1, 0.1], 
+                "type": "include"
+              }, {
+                  "trigName": ["Correct", "ISI"], 
+                  "tSearch": [0.15, {"trigName": ["Target", "Distractor"], "within": [0.15, 5], "offset": -0.05}], 
+                  "type": "correct"
+                }]
+      },{
+            "name": "Distractor",
+            "shortname": "Distractor",
+            "require": [{
+              "trigName": ["Distractor"], 
+              "tSearch": [-0.1, 0.1], 
+              "type": "include"
+              }, {
+                "trigName": ["Correct"], 
+                "tSearch": [0.15, {"trigName": ["Target", "Distractor"], "within": [0.15, 5], "offset": -0.05}], 
+                "type": "correct"
+              }]
+    }]
+}
