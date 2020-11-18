@@ -23,12 +23,12 @@
             "shortname": "Nogocorr",
             "require": [{
               "trigName": ["Nogo"], 
-              "tSearch": [-0.1, 0.1], 
+              "tSearch": [-0.1, 0.1],  
               "type": "include"
               }, {
                 "trigName": ["Incorrect"], 
                 "tSearch": [0.15, {"trigName": ["Nogo", "Go"], "within": [0.15, 5], "offset": -0.05}], 
-                "type": "incorrect"
+                "type": "exclude"
               }]
       },{
             "name": "NogoComm",
@@ -40,7 +40,7 @@
               }, {
                 "trigName": ["Incorrect"], 
                 "tSearch": [0.15, {"trigName": ["Nogo", "Go"], "within": [0.15, 5], "offset": -0.05}], 
-                "type": "include"
+                "type": "correct"
               }]
     }]
 }
