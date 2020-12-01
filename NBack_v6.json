@@ -8,6 +8,7 @@
   },
   "details": [{
     "name": "New",
+    "shortname": "new",
     "require": [{
       "trigName": "New",
       "tSearch": [-0.1, 0.1],
@@ -23,6 +24,7 @@
     }]
   }, {
     "name": "Repeat",
+    "shortname": "rpt",
     "require": [{
       "trigName": "Repeat",
       "tSearch": [-0.1, 0.1],
@@ -38,6 +40,7 @@
     }]
   }, {
     "name": "NewIncorrect",
+    "shortname": "newinc",
     "require": [{
       "trigName": "New",
       "tSearch": [-0.1, 0.1],
@@ -53,6 +56,7 @@
     }]
   }, {
     "name": "RepeatIncorrect",
+    "shortname": "rptinc",
     "require": [{
       "trigName": "Repeat",
       "tSearch": [-0.1, 0.1],
