@@ -1,0 +1,45 @@
+{
+  "t0marker": ["Shift", "NoShift"],
+  "t0shift": 0.023,
+  "tEpoch": [-1, 1],
+  "tInterest": [-1, 1],
+  "defaults": {
+    "tSearch": [-0.01, 0.01],
+    "getTrigStats": []
+  },
+  "name": "Set Shifting",
+  "shortname": "setshifting",
+  "details": [{
+    "name": "Shift",
+	"shortname": "shift",
+    "require": [{
+      "trigName": ["Shift"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.1, {
+        "trigName": ["Shift", "NoShift"], 
+        "within": [0.15, 5.0], 
+        "offset": 0
+      }],
+      "type": "correct"
+    }]
+  }, {
+	"name": "Non-shift",
+    "shortname": "noshift",
+    "require": [{
+      "trigName": ["NoShift"],
+      "tSearch": [-0.1, 0.1],
+      "type": "include"
+    }, {
+      "trigName": ["Correct"],
+      "tSearch": [0.1, {
+        "trigName": ["Shift", "NoShift"], 
+        "within": [0.15, 5.0], 
+        "offset": 0
+      }],
+      "type": "correct"
+    }]
+  }]
+}
